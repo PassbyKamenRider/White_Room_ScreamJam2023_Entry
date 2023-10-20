@@ -13,6 +13,21 @@ public class TextInput : MonoBehaviour
         gameController = GetComponent<GameController>();
     }
 
+    // play keyboard sound
+    private void Update()
+    {
+        // Check if the input field is currently selected/focused
+        if (inputField.isFocused)
+        {
+            // Check if any key is pressed
+            if (Input.anyKeyDown)
+            {
+                // Play the sound
+                audioPlayer.instance.play_audio_keyboard();
+            }
+        }
+    }
+
     public void AcceptTextInput(string input)
     {
         input = input.ToLower();
@@ -32,5 +47,12 @@ public class TextInput : MonoBehaviour
 
         gameController.DisplayLoggedText();
         inputField.text = "";
+
+        //play audio_keyboard when pressing enter
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+                // Play the sound
+            audioPlayer.instance.play_audio_keyboard();
+        }
     }
 }

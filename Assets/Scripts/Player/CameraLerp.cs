@@ -17,7 +17,12 @@ public class CameraLerp : MonoBehaviour
 
     private void Update() {
         if (!isSit && !isLerp && Input.GetKeyDown(KeyCode.E))
-        {
+        {   
+            // stop playing audio_walk after sitting
+            if (audioPlayer.instance.audio_walk.isPlaying) {
+                audioPlayer.instance.stop_audio_walk();
+            }
+
             isLerp = true;
             originalPosition = transform.position;
             originalRotation = cam.transform.rotation;

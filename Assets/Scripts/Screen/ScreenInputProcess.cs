@@ -39,5 +39,12 @@ public class ScreenInputProcess : MonoBehaviour
                 ExecuteEvents.Execute(result.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerUpHandler);
             }
         }
+
+        // play mouse-click sound
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            audioPlayer.instance.play_audio_mouse();
+        }
     }
 }

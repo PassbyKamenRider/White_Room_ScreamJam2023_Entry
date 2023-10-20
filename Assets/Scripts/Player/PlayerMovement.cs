@@ -24,6 +24,15 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
+        //handle audio_walk
+        if ((horizontalInput != 0 || verticalInput != 0) && !audioPlayer.instance.audio_walk.isPlaying)
+        {
+            audioPlayer.instance.play_audio_walk();
+        } else if (horizontalInput == 0 && verticalInput == 0 && audioPlayer.instance.audio_walk.isPlaying)
+        {
+            audioPlayer.instance.stop_audio_walk();
+        }
+
         Vector3 groundSpeed = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         if (groundSpeed.magnitude > moveSpeed)
         {

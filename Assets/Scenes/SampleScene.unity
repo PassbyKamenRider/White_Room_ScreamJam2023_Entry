@@ -476,8 +476,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2982,6 +2982,64 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3335724914305450694, guid: 5f7183ff28da84b4faaeac1846c4e521, type: 3}
+--- !u!1 &1405111965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1405111966}
+  - component: {fileID: 1405111968}
+  - component: {fileID: 1405111967}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1405111966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405111965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 570920829}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1405111967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405111965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26a0d4c7cdc9b4428e9853b1a7479e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1405111968
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405111965}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.057176277, y: 0.049221583, z: 0.04710012}
+  m_Center: {x: -0.014776487, y: 0.012197223, z: 0.00031280995}
 --- !u!1 &1416018351 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e16b77a337e8ac4f93578d634f52880, type: 3}
@@ -4904,6 +4962,7 @@ GameObject:
   - component: {fileID: 2140701625}
   - component: {fileID: 2140701626}
   - component: {fileID: 2140701627}
+  - component: {fileID: 2140701628}
   m_Layer: 5
   m_Name: PuzzleGameController
   m_TagString: Untagged
@@ -4945,9 +5004,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomNavigation: {fileID: 0}
   interactionDescriptions: []
+  interactableItems: {fileID: 0}
   displayText: {fileID: 94723589}
   inputActions:
   - {fileID: 11400000, guid: 7d345048d8508b746a59b8f6fb4a9f23, type: 2}
+  - {fileID: 11400000, guid: 894dafe4837755a45bbec897dc442375, type: 2}
+  - {fileID: 11400000, guid: 17d1a2213e4e2a348a6af6b0d5439fad, type: 2}
 --- !u!114 &2140701626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4974,3 +5036,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 1479849710}
+--- !u!114 &2140701628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140701623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a2b62ef56896247b744bcaebc70fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nounsInRoom: []

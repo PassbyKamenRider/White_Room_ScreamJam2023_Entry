@@ -7,12 +7,14 @@ public class GameController : MonoBehaviour
 {
     [HideInInspector] public RoomNavigation roomNavigation;
     [HideInInspector] public List<string> interactionDescriptions = new List<string>();
+    [HideInInspector] public InteractableItems interactableItems;
     public TextMeshProUGUI displayText;
     public InputAction[] inputActions;
     private List<string> actionLog = new List<string>();
 
     private void Awake() {
         roomNavigation = GetComponent<RoomNavigation>();
+        interactableItems = GetComponent<InteractableItems>();
     }
 
     private void Start() {
@@ -29,7 +31,7 @@ public class GameController : MonoBehaviour
 
     public void DisplayRoomText()
     {
-        ClearInteraction();
+        ClearCollections();
         
         UnpackRoom();
 
@@ -43,14 +45,51 @@ public class GameController : MonoBehaviour
         actionLog.Add(stringToAdd + "\n");
     }
 
-    private void ClearInteraction()
+    public string GetValidInteractVerb(Dictionary<string, string> verbDict, string verb, string noun)
+    {
+        if (verbDict.ContainsKey(noun))
+        {
+            return verbDict[noun];
+        }
+
+        return "You can't " + verb + " " + noun;
+    }
+
+    private void InteractableObjectsInRoom(Room currentRoom)
+    {
+        for (int i = 0; i < currentRoom.interactableObjects.Length; i++)
+        {
+            string descriptionAvailableItem = interactableItems.GetAvailableItem(currentRoom, i);
+            if (descriptionAvailableItem != null)
+            {
+                interactionDescriptions.Add(descriptionAvailableItem);
+            }
+
+            InteractableObject interactableInRoom = currentRoom.interactableObjects[i];
+            foreach (ItemInteraction itemInteraction in interactableInRoom.itemInteractions)
+            {
+                if (itemInteraction.inputAction.keyWord == "examine")
+                {
+                    interactableItems.examineDict.Add(interactableInRoom.noun, itemInteraction.textResponse);
+                }
+                if (itemInteraction.inputAction.keyWord == "take")
+                {
+                    interactableItems.takeDict.Add(interactableInRoom.noun, itemInteraction.textResponse);
+                }
+            }
+        }
+    }
+
+    private void ClearCollections()
     {
         interactionDescriptions.Clear();
         roomNavigation.ClearExits();
+        interactableItems.ClearCollection();
     }
 
     private void UnpackRoom()
     {
         roomNavigation.UnpackExitRoom();
+        InteractableObjectsInRoom(roomNavigation.currentRoom);
     }
 }

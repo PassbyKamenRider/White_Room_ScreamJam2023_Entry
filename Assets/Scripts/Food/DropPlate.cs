@@ -13,6 +13,7 @@ public class DropPlate : MonoBehaviour
     private void Update() {
         if (isTriggered && Input.GetKeyDown(KeyCode.F))
         {
+            audioPlayer.instance.play_audio_place();
             foodPickup.DropItem(targetPosition, targetRotation, canBeRetrieved);
             gameObject.SetActive(false);
         }

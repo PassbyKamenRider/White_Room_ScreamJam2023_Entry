@@ -18,7 +18,7 @@ public class audioPlayer : MonoBehaviour
         }
     }
 
-    public AudioSource audio_keyboard, audio_white_noise, audio_mouse, audio_walk, audio_sit, audio_eat;
+    public AudioSource audio_keyboard, audio_white_noise, audio_mouse, audio_walk, audio_sit, audio_eat, audio_flush, audio_place;
 
     public void play_audio_keyboard()
     {
@@ -71,5 +71,17 @@ public class audioPlayer : MonoBehaviour
     {
         audio_sit.time = 1.0f;
         audio_sit.Play();
+    }
+
+
+    public void play_audio_flush()
+    {
+        audio_flush.Play();
+    }
+
+
+    public void play_audio_place()
+    {
+        audio_place.Play();
     }
 }

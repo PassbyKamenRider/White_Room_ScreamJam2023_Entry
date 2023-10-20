@@ -11,7 +11,9 @@ public class ToiletFlush : MonoBehaviour
         {
             // toilet flush
             Debug.Log("Flush toilet");
-            audioPlayer.instance.play_audio_flush();
+            if (!audioPlayer.instance.audio_flush.isPlaying) {
+                audioPlayer.instance.play_audio_flush();
+            }
         }
     }
 

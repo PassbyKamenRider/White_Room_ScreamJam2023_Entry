@@ -36,6 +36,7 @@ public class ItemInteract : MonoBehaviour
             if (Physics.Raycast(cameraRay, out RaycastHit hitinfo, interactRange, edibleMask))
             {
                 Destroy(hitinfo.collider.gameObject);
+                audioPlayer.instance.play_audio_eat();
             }
         }
     }

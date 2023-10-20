@@ -22,6 +22,8 @@ public class CameraLerp : MonoBehaviour
             if (audioPlayer.instance.audio_walk.isPlaying) {
                 audioPlayer.instance.stop_audio_walk();
             }
+            audioPlayer.instance.play_audio_sit();
+
 
             isLerp = true;
             originalPosition = transform.position;

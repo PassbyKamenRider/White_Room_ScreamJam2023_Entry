@@ -1,11 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class audioPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public static audioPlayer instance;
 
     private void Awake()
@@ -21,24 +18,58 @@ public class audioPlayer : MonoBehaviour
         }
     }
 
-    public AudioSource audio_keyboard, audio_white_noise, audio_mouse, audio_walk;
+    public AudioSource audio_keyboard, audio_white_noise, audio_mouse, audio_walk, audio_sit, audio_eat;
 
-
-    public void play_audio_keyboard() {
+    public void play_audio_keyboard()
+    {
         audio_keyboard.Play();
     }
 
-
-    public void play_audio_mouse() {
+    public void play_audio_mouse()
+    {
         audio_mouse.Play();
     }
 
-
-    public void play_audio_walk() {
+    public void play_audio_walk()
+    {
+        audio_walk.loop = true; // Ensure it loops
         audio_walk.Play();
     }
 
-    public void stop_audio_walk() {
-        audio_walk.Stop();
+    public void stop_audio_walk()
+    {
+        if (audio_walk.isPlaying)
+        {
+            float halfDuration = audio_walk.clip.length / 2;
+
+            if (audio_walk.time <= halfDuration)
+            {
+                // If currently in the first half
+                StartCoroutine(StopAfterDelay(audio_walk, halfDuration - audio_walk.time));
+            }
+            else
+            {
+                // If currently in the second half
+                float remainingTimeInClip = audio_walk.clip.length - audio_walk.time;
+                StartCoroutine(StopAfterDelay(audio_walk, remainingTimeInClip));
+            }
+        }
+    }
+
+    IEnumerator StopAfterDelay(AudioSource audioSource, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        audioSource.Stop();
+    }
+
+    public void play_audio_eat()
+    {
+        audio_eat.Play();
+    }
+
+    public void play_audio_sit()
+    {
+        audio_sit.time = 1.0f;
+        audio_sit.Play();
     }
 }

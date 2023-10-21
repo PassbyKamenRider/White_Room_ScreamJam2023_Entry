@@ -32,7 +32,7 @@ public class CameraLerp : MonoBehaviour
             playerMovement.enabled = false;
             StartCoroutine(LerpCamera(transform.position, endPosition));
         }
-        else if (isSit && !isLerp && Input.GetKeyDown(KeyCode.E))
+        else if (isSit && !isLerp && Input.GetKey(KeyCode.E) && Input.GetKey(KeyCode.LeftShift))
         {
             isLerp = true;
             playerCamera.enabled = false;

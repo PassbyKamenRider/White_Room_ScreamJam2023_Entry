@@ -8,4 +8,5 @@ public class ItemInteraction
     public InputAction inputAction;
     [TextArea]
     public string textResponse;
+    public ActionResponse actionResponse;
 }

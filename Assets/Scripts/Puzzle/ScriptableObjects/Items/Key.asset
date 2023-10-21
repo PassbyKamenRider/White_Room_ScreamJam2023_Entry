@@ -17,5 +17,10 @@ MonoBehaviour:
   itemInteractions:
   - inputAction: {fileID: 11400000, guid: 894dafe4837755a45bbec897dc442375, type: 2}
     textResponse: It's a key made of brass.
+    actionResponse: {fileID: 0}
   - inputAction: {fileID: 11400000, guid: 17d1a2213e4e2a348a6af6b0d5439fad, type: 2}
     textResponse: You take the key.
+    actionResponse: {fileID: 0}
+  - inputAction: {fileID: 11400000, guid: 57172e0009284494f8affd548a30bafe, type: 2}
+    textResponse: You take the key.
+    actionResponse: {fileID: 11400000, guid: 9d91257f500480844b6627982f384b5f, type: 2}

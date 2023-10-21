@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5d48eaf0c40d64ab5b985cc2f34eb9, type: 3}
+  m_Name: KeyInStart
+  m_EditorClassIdentifier: 
+  requiredString: Second Room
+  changeTarget: {fileID: 11400000, guid: 76329dcc2a18a424f92041bbf40eb31c, type: 2}

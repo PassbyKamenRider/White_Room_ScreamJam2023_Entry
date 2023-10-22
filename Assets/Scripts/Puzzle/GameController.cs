@@ -35,9 +35,9 @@ public class GameController : MonoBehaviour
         
         UnpackRoom();
 
-        string combineText = roomNavigation.currentRoom.description + "\n\n" + string.Join("\n", interactionDescriptions);
+        //string combineText = roomNavigation.currentRoom.description + "\n\n" + string.Join("\n", interactionDescriptions);
 
-        LogStringWithReturn(combineText);
+        LogStringWithReturn(roomNavigation.currentRoom.description);
     }
 
     public void LogStringWithReturn(string stringToAdd)

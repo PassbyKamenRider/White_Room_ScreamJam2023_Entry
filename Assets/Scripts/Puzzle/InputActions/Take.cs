@@ -7,6 +7,10 @@ public class Take : InputAction
 {
     public override void RespondToInput(GameController gameController, string[] inputWords)
     {
+        if (inputWords.Length < 2)
+        {
+            return;
+        }
         Dictionary<string, string> TakeDict = gameController.interactableItems.Take(inputWords);
 
         if (TakeDict != null)

@@ -33,8 +33,13 @@ public class TextInput : MonoBehaviour
         input = input.ToLower();
         gameController.LogStringWithReturn(input);
 
-        char[] delimeters = {' '};
-        string[] inputWords = input.Split(delimeters);
+        int deliPos = input.IndexOf(' ');
+        if (deliPos == -1)
+        {
+            Debug.Log("Invalid action");
+            return;
+        }
+        string[] inputWords = {input.Substring(0, deliPos), input.Substring(deliPos + 1, input.Length - deliPos - 1)};
 
         foreach(InputAction inputAction in gameController.inputActions)
         {

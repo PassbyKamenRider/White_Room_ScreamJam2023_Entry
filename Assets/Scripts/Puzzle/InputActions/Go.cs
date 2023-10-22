@@ -7,6 +7,10 @@ public class Go : InputAction
 {
     public override void RespondToInput(GameController gameController, string[] inputWords)
     {
+        if (inputWords.Length < 2)
+        {
+            return;
+        }
         gameController.roomNavigation.ChangeRoom(inputWords[1]);
     }
 }

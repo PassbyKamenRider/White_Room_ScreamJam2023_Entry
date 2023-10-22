@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c370bcc4ca85564e81821fc9e0a91ac, type: 3}
+  m_Name: Living Room_1
+  m_EditorClassIdentifier: 
+  description: The room is dimly lit, with only a faint light coming from the door
+    behind you, but it's enough for you to see the entire surroundings. Directly
+    in front of you is a <b>white door</b>, which seems to be the way out. There
+    are also a <b>black door</b> on the left, a <b>yellow door</b> on the right,
+    and a <b>red door</b> behind you. This room appears to only have a <b>couch</b>.
+  roomName: Living Room_1
+  exits:
+  - keyString: white door
+    exitDescription: 
+    valueRoom: {fileID: 11400000, guid: 0c573298c6d9dd24fac6e5c9d11d7284, type: 2}
+  - keyString: black door
+    exitDescription: 
+    valueRoom: {fileID: 11400000, guid: 86c38485b9023704799f0467043da499, type: 2}
+  - keyString: yellow door
+    exitDescription: 
+    valueRoom: {fileID: 11400000, guid: d78e45d6dbaff6141ad15b155215ec25, type: 2}
+  interactableObjects:
+  - {fileID: 11400000, guid: 3c4fce6a76559b94fa456de4da680d9c, type: 2}
+  - {fileID: 11400000, guid: 6ac9f710339c7fc48a96f7f4b7cb6700, type: 2}
+  - {fileID: 11400000, guid: a4622d808aeb740468999453efcc8ca2, type: 2}
+  - {fileID: 11400000, guid: 609b3212710a6e84e9306e65dcc92c12, type: 2}
+  - {fileID: 11400000, guid: dcc548a2d5501cb4985520b5e0d10930, type: 2}
+  - {fileID: 11400000, guid: 836bc73ebe624244fbb9029ea576e83f, type: 2}
+  - {fileID: 11400000, guid: 61a64c3f39fe2f34e87285eeef320e50, type: 2}

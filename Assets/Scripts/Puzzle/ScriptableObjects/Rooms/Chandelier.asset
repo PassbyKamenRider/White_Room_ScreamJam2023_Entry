@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c370bcc4ca85564e81821fc9e0a91ac, type: 3}
+  m_Name: Chandelier
+  m_EditorClassIdentifier: 
+  description: Disgusting. Even though it's just an ordinary chandelier, it inexplicably
+    makes you nauseous. Its weird arms and the play of light and shadow genuinely
+    upset your stomach.
+  roomName: chandelier
+  exits:
+  - keyString: kitchen
+    exitDescription: 
+    valueRoom: {fileID: 11400000, guid: 24e4c9d9bb9d04a4d8e0377cd5dc3a91, type: 2}
+  interactableObjects:
+  - {fileID: 11400000, guid: 64cb0d6bed0ac0144baedf77fe676719, type: 2}

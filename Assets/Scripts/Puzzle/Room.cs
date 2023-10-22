@@ -9,4 +9,16 @@ public class Room : ScriptableObject
     public string roomName;
     public Exit[] exits;
     public InteractableObject[] interactableObjects;
+
+    public InteractableObject FindObjectByName(string noun)
+    {
+        foreach (InteractableObject obj in interactableObjects)
+        {
+            if (obj.noun == noun)
+            {
+                return obj;
+            }
+        }
+        return null;
+    }
 }

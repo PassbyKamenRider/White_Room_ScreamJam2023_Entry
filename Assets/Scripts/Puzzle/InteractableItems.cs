@@ -9,7 +9,7 @@ public class InteractableItems : MonoBehaviour
     public Dictionary<string, string> takeDict = new Dictionary<string, string>();
     [HideInInspector] public List<string> nounsInRoom = new List<string>();
     private Dictionary<string, ActionResponse> useDict = new Dictionary<string, ActionResponse>();
-    private List<string> nounsInInventory = new List<string>();
+    public List<string> nounsInInventory = new List<string>();
     private GameController gameController;
 
     private void Awake() {
@@ -93,6 +93,13 @@ public class InteractableItems : MonoBehaviour
                 if (!actionResult)
                 {
                     gameController.LogStringWithReturn("Nothing happens.");
+                }
+                else
+                {
+                    if (nounToUse == "rock")
+                    {
+                        nounsInInventory.Remove("rock");
+                    }
                 }
             }
             else

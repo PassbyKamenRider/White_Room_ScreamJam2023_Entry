@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c370bcc4ca85564e81821fc9e0a91ac, type: 3}
+  m_Name: Kitchen
+  m_EditorClassIdentifier: 
+  description: A seemingly ordinary kitchen, with a <b>fridge</b>, a <b>cabinet</b>,
+    and a stove. Stove looks very clean. Does no one live here? You notice the source
+    of light is from above, from an oddly shaped <b>chandelier</b>.
+  roomName: Kitchen
+  exits:
+  - keyString: living room
+    exitDescription: 
+    valueRoom: {fileID: 11400000, guid: f1c9de88cda20b54e97cb840bf09d1ec, type: 2}
+  - keyString: cabinet
+    exitDescription: 
+    valueRoom: {fileID: 11400000, guid: e82c28d8968f9d845b40d67cc08732e8, type: 2}
+  - keyString: fridge
+    exitDescription: 
+    valueRoom: {fileID: 11400000, guid: 748cba6906b00484093c01e41447c73e, type: 2}
+  - keyString: chandelier
+    exitDescription: 
+    valueRoom: {fileID: 11400000, guid: 20322d400f2d6004b96cf5a53ffbf61e, type: 2}
+  interactableObjects:
+  - {fileID: 11400000, guid: 1e8bd8b922e61684fad42a832c1457dc, type: 2}
+  - {fileID: 11400000, guid: 64cb0d6bed0ac0144baedf77fe676719, type: 2}
+  - {fileID: 11400000, guid: aacd8a87eaf13324ca3f5ce11908c74f, type: 2}
+  - {fileID: 11400000, guid: 749b81d679da8fa4990fa78c20231eb4, type: 2}

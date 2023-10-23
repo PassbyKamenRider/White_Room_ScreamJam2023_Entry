@@ -8,6 +8,7 @@ public class CameraLerp : MonoBehaviour
     public PlayerCamera playerCamera;
     public PlayerMovement playerMovement;
     public ScreenInputDetect screenInputDetect;
+    public GameObject cross;
     private Vector3 endPosition = new Vector3(-52f, -3f, -20.5f);
     private Vector3 originalPosition;
     private Quaternion originalRotation;
@@ -24,7 +25,7 @@ public class CameraLerp : MonoBehaviour
             }
             audioPlayer.instance.play_audio_sit();
 
-
+            cross.SetActive(false);
             isLerp = true;
             originalPosition = transform.position;
             originalRotation = cam.transform.rotation;
@@ -34,6 +35,7 @@ public class CameraLerp : MonoBehaviour
         }
         else if (isSit && !isLerp && Input.GetKey(KeyCode.E) && Input.GetKey(KeyCode.LeftShift))
         {
+            cross.SetActive(true);
             isLerp = true;
             playerCamera.enabled = false;
             StartCoroutine(LerpCamera(transform.position, originalPosition));

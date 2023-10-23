@@ -32,11 +32,12 @@ public class ScreenInputProcess : MonoBehaviour
         {
             if (sendMouseDown)
             {
-                ExecuteEvents.Execute(result.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerDownHandler);
+                ExecuteEvents.Execute(result.gameObject, mouseEvent, ExecuteEvents.pointerDownHandler);
             }
-            if (sendMouseUp)
+            else if (sendMouseUp)
             {
-                ExecuteEvents.Execute(result.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerUpHandler);
+                ExecuteEvents.Execute(result.gameObject, mouseEvent, ExecuteEvents.pointerUpHandler);
+                ExecuteEvents.Execute(result.gameObject, mouseEvent, ExecuteEvents.pointerClickHandler);
             }
         }
 

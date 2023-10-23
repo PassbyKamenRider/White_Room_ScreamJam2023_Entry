@@ -58,6 +58,9 @@ public class SurveyController : MonoBehaviour
                     objective.text = "Objective:\nComplete the Game";
                     sleepAnimator.Play("Sleep");
                     progress += 1;
+                    audioPlayer.instance.play_audio_bed();
+                    audioPlayer.instance.play_audio_dream();
+                    //progress += 1;
                 }
             }
         }
@@ -76,6 +79,7 @@ public class SurveyController : MonoBehaviour
         if (progress == 3)
         {
             lightAnimator.Play("LightFlash");
+            audioPlayer.instance.play_audio_light();
         }
 
         if (progress == 11)

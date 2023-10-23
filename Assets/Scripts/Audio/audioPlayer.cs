@@ -18,7 +18,8 @@ public class audioPlayer : MonoBehaviour
         }
     }
 
-    public AudioSource audio_keyboard, audio_white_noise, audio_mouse, audio_walk, audio_sit, audio_eat, audio_flush, audio_place;
+    public AudioSource audio_keyboard, audio_white_noise, audio_mouse, audio_walk, audio_sit, audio_eat, audio_flush, audio_place,
+    audio_light, audio_bed, audio_dream;
 
     public void play_audio_keyboard()
     {
@@ -84,4 +85,34 @@ public class audioPlayer : MonoBehaviour
     {
         audio_place.Play();
     }
+
+
+    public void play_audio_light()
+    {
+        audio_light.Play();
+    }
+
+
+    public void play_audio_bed()
+    {
+        audio_bed.Play();
+    }
+
+
+    private void play_audio_dream_helper()
+    {   
+        audio_dream.Play();
+    }
+
+    public void play_audio_dream()
+    {   
+        Invoke("play_audio_dream_helper", 4f);
+    }
+
+
+
+
+
+    
+
 }

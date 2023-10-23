@@ -49,7 +49,6 @@ public class ItemInteract : MonoBehaviour
                     {
                         HUD.SetActive(false);
                         endAScreen.SetActive(true);
-                        endAScreen.GetComponent<Animator>().Play("StartEndingA");
                         Invoke("Restart", 5.0f);
                     }
                 }

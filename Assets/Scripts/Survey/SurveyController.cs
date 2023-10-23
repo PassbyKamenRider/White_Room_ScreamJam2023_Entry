@@ -38,14 +38,15 @@ public class SurveyController : MonoBehaviour
                 }
             }
         }
-        if (progress == 12 && plate.transform.childCount == 0)
+
+        else if (progress == 12 && plate.transform.childCount == 0)
         {
             progress += 1;
             text.text = "Great job. You can go sleep now, we'll have new tasks for you tomorrow.";
             objective.text = "Objective:\nGo to bed";
         }
 
-        if (progress == 13)
+        else if (progress == 13)
         {
             Ray cameraRay = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             if (Physics.Raycast(cameraRay, out RaycastHit hitinfo, 10.0f) && Input.GetKeyDown(KeyCode.E))
@@ -53,22 +54,21 @@ public class SurveyController : MonoBehaviour
                 if (hitinfo.collider.name == "bed")
                 {
                     Destroy(plate);
-                    gameObject.SetActive(false);
                     puzzle.SetActive(true);
                     objective.text = "Objective:\nComplete the Game";
                     sleepAnimator.Play("Sleep");
-                    progress += 1;
                     audioPlayer.instance.play_audio_bed();
                     audioPlayer.instance.play_audio_dream();
-                    //progress += 1;
+                    progress += 1;
                 }
             }
         }
 
-        if (progress == 14 && sleepAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+        else if (progress == 14 && sleepAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
         {
             sleepPanel.SetActive(false);
             progress += 1;
+            gameObject.SetActive(false);
         }
     }
 

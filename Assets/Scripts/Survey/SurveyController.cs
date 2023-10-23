@@ -11,9 +11,11 @@ public class SurveyController : MonoBehaviour
     public TextMeshProUGUI objective;
     [TextArea] public string[] questions;
     public Animator lightAnimator;
+    public Animator sleepAnimator;
     public GameObject puzzle;
     public GameObject questionScreen;
     public GameObject endScreen;
+    public GameObject sleepPanel;
     public GameObject plate;
     private int progress;
 
@@ -36,7 +38,6 @@ public class SurveyController : MonoBehaviour
                 }
             }
         }
-
         if (progress == 12 && plate.transform.childCount == 0)
         {
             progress += 1;
@@ -51,13 +52,20 @@ public class SurveyController : MonoBehaviour
             {
                 if (hitinfo.collider.name == "bed")
                 {
-                    Debug.Log("sleep");
                     Destroy(plate);
                     gameObject.SetActive(false);
                     puzzle.SetActive(true);
-                    //progress += 1;
+                    objective.text = "Objective:\nComplete the Game";
+                    sleepAnimator.Play("Sleep");
+                    progress += 1;
                 }
             }
+        }
+
+        if (progress == 14 && sleepAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+        {
+            sleepPanel.SetActive(false);
+            progress += 1;
         }
     }
 

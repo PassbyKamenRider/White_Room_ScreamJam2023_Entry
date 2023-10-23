@@ -12,6 +12,11 @@ public class GameController : MonoBehaviour
     public InputAction[] inputActions;
     private List<string> actionLog = new List<string>();
 
+    // hard coded for endings
+    public GameObject endScreen;
+    public GameObject puzzleScreen;
+    public GameObject endAPlate;
+
     private void Awake() {
         roomNavigation = GetComponent<RoomNavigation>();
         interactableItems = GetComponent<InteractableItems>();

@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 
 public class ItemInteract : MonoBehaviour
 {
     public Camera playerCamera;
+    public PostProcessVolume postProcessVolume;
     public LayerMask pickupMask;
     public LayerMask edibleMask;
     public Transform pickupPoint;
     public Transform playerCameraTransform;
     public GameObject plateDropPlace;
     public BoxCollider chairCollider;
+    public GameObject endAScreen;
+    public GameObject HUD;
     private float rotationSpeed = 10.0f;
     private float interactRange = 5.0f;
     private Rigidbody currentPickup;
@@ -35,6 +40,19 @@ public class ItemInteract : MonoBehaviour
             Ray cameraRay = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             if (Physics.Raycast(cameraRay, out RaycastHit hitinfo, interactRange, edibleMask))
             {
+                if (hitinfo.collider.gameObject.name == "bad")
+                {
+                    Vignette vignette;
+                    postProcessVolume.profile.TryGetSettings(out vignette);
+                    vignette.intensity.value += 0.2f;
+                    if (vignette.intensity.value >= 1.0f)
+                    {
+                        HUD.SetActive(false);
+                        endAScreen.SetActive(true);
+                        endAScreen.GetComponent<Animator>().Play("StartEndingA");
+                        Invoke("Restart", 5.0f);
+                    }
+                }
                 Destroy(hitinfo.collider.gameObject);
                 audioPlayer.instance.play_audio_eat();
             }
@@ -75,5 +93,10 @@ public class ItemInteract : MonoBehaviour
             chairCollider.enabled = true;
             currentPickup = null;
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("Main");
     }
 }

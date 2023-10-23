@@ -66,6 +66,7 @@ public class SurveyController : MonoBehaviour
         if (progress == 3)
         {
             lightAnimator.Play("LightFlash");
+            audioPlayer.instance.play_audio_light();
         }
 
         if (progress == 11)

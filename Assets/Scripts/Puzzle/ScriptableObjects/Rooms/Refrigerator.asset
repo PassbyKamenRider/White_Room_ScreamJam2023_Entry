@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: When you open the fridge, a foul stench hits you, making you close
     your eyes. After a bout of coughing and a burning sensation in your nose, you
-    look back into the fridge. Inside, there's only what seems to be a <b>normal
-    key</b> and a <b>banana</b>.
-  roomName: 
+    look back into the fridge. Inside, there's only what seems to be a <b>REGULAR
+    KEY</b> and a <b>BANANA</b>.
+  roomName: Fridge
   exits:
   - keyString: kitchen
     exitDescription: 
@@ -24,3 +24,4 @@ MonoBehaviour:
   interactableObjects:
   - {fileID: 11400000, guid: e68360cd36fb31043bcea126bf2bc0e8, type: 2}
   - {fileID: 11400000, guid: ce7829b5c34221641b6ce195fb8dce41, type: 2}
+  image: {fileID: 2800000, guid: fe0ddae98b0b4df4e92db9329187043d, type: 3}

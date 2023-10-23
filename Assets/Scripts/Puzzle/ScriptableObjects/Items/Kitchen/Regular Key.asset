@@ -18,3 +18,6 @@ MonoBehaviour:
   - inputAction: {fileID: 11400000, guid: 17d1a2213e4e2a348a6af6b0d5439fad, type: 2}
     textResponse: You picked up the regular key.
     actionResponse: {fileID: 0}
+  - inputAction: {fileID: 11400000, guid: 57172e0009284494f8affd548a30bafe, type: 2}
+    textResponse: You used the regular key on the white door.
+    actionResponse: {fileID: 11400000, guid: c30f4dee269d138409b97a39accfdb80, type: 2}

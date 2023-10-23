@@ -9,6 +9,7 @@ public class Room : ScriptableObject
     public string roomName;
     public Exit[] exits;
     public InteractableObject[] interactableObjects;
+    public Texture2D image;
 
     public InteractableObject FindObjectByName(string noun)
     {

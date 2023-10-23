@@ -21,3 +21,4 @@ MonoBehaviour:
   interactableObjects:
   - {fileID: 11400000, guid: 2945a78e75104d74096eb9a1bc8db573, type: 2}
   - {fileID: 11400000, guid: e68360cd36fb31043bcea126bf2bc0e8, type: 2}
+  image: {fileID: 2800000, guid: 5ad2d235e913ff34a8e854799d7caf1e, type: 3}

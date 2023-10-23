@@ -7,7 +7,7 @@ public class End : InputAction
 {
     public override void RespondToInput(GameController gameController, string[] inputWords)
     {
-        if (gameController.roomNavigation.currentRoom.roomName == "EndA")
+        if (gameController.roomNavigation.currentRoom.roomName == "EndA" && inputWords[1] == "game")
         {
             gameController.puzzleScreen.SetActive(false);
             gameController.endScreen.SetActive(true);

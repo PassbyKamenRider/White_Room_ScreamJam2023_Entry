@@ -11,6 +11,7 @@ public class ChangeRoomResponse : ActionResponse
         if (gameController.roomNavigation.currentRoom.roomName == requiredString)
         {
             gameController.roomNavigation.currentRoom = changeTarget;
+            gameController.roomNavigation.currentRoomImage.texture = changeTarget.image;
             gameController.DisplayRoomText();
             return true;
         }

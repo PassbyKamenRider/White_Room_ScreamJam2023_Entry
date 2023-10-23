@@ -20,6 +20,9 @@ MonoBehaviour:
   - keyString: living room
     exitDescription: 
     valueRoom: {fileID: 11400000, guid: f1c9de88cda20b54e97cb840bf09d1ec, type: 2}
+  - keyString: window
+    exitDescription: 
+    valueRoom: {fileID: 11400000, guid: 90e47afadd9d7994ea0fad91e93580d1, type: 2}
   interactableObjects:
   - {fileID: 11400000, guid: 78090f7355c57414ca3f6879054307ad, type: 2}
   image: {fileID: 2800000, guid: e2606beea3cfd22418e708f74c8382ce, type: 3}

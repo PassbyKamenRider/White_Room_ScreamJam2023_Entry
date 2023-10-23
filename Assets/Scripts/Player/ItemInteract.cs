@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ItemInteract : MonoBehaviour
 {
+    public GameController puzzleGameController;
     public Camera playerCamera;
     public PostProcessVolume postProcessVolume;
     public LayerMask pickupMask;
@@ -16,6 +17,7 @@ public class ItemInteract : MonoBehaviour
     public BoxCollider chairCollider;
     public GameObject endAScreen;
     public GameObject HUD;
+    public GameObject bananaEffect;
     private float rotationSpeed = 10.0f;
     private float interactRange = 5.0f;
     private Rigidbody currentPickup;
@@ -51,6 +53,12 @@ public class ItemInteract : MonoBehaviour
                         endAScreen.SetActive(true);
                         Invoke("Restart", 5.0f);
                     }
+                }
+                if (hitinfo.collider.gameObject.name == "banana")
+                {
+                    bananaEffect.SetActive(true);
+                    puzzleGameController.LogStringWithReturn("A <b>YELLOW KEY</b> suddenly appears on the other side of the <b>WINDOW</b>. Maybe it's the key to the exit? Anyway, you should <b>TAKE</b> it.");
+                    puzzleGameController.DisplayLoggedText();
                 }
                 Destroy(hitinfo.collider.gameObject);
                 audioPlayer.instance.play_audio_eat();

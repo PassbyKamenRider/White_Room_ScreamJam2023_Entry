@@ -100,6 +100,10 @@ public class InteractableItems : MonoBehaviour
                     {
                         nounsInInventory.Remove("rock");
                     }
+                    if (nounToUse == "banana")
+                    {
+                        nounsInInventory.Remove("banana");
+                    }
                 }
             }
             else

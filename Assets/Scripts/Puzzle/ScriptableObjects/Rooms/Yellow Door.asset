@@ -21,3 +21,4 @@ MonoBehaviour:
     valueRoom: {fileID: 11400000, guid: f1c9de88cda20b54e97cb840bf09d1ec, type: 2}
   interactableObjects:
   - {fileID: 11400000, guid: dcc548a2d5501cb4985520b5e0d10930, type: 2}
+  image: {fileID: 2800000, guid: a47cfafba251dd74c97c78231eb2058a, type: 3}

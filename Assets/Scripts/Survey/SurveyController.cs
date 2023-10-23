@@ -29,6 +29,7 @@ public class SurveyController : MonoBehaviour
             {
                 if (hitinfo.collider.name == "TurnBack")
                 {
+                    Destroy(hitinfo.transform.gameObject);
                     text.text = "Just kidding. Your food will be delivered soon.";
                     progress += 1;
                     Invoke("UpdateFood", 10.0f);
@@ -51,6 +52,7 @@ public class SurveyController : MonoBehaviour
                 if (hitinfo.collider.name == "bed")
                 {
                     Debug.Log("sleep");
+                    Destroy(plate);
                     gameObject.SetActive(false);
                     puzzle.SetActive(true);
                     //progress += 1;

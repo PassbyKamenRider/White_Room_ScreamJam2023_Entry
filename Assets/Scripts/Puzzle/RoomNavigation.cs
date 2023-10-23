@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoomNavigation : MonoBehaviour
 {
     public Room currentRoom;
+    public RawImage currentRoomImage;
+    public Texture2D normalFridge;
     private GameController gameController;
     private Dictionary<string, Room> exitsDict = new Dictionary<string, Room>();
 
@@ -26,6 +29,14 @@ public class RoomNavigation : MonoBehaviour
         if (exitsDict.ContainsKey(direction))
         {
             currentRoom = exitsDict[direction];
+            if (exitsDict[direction].image != null)
+            {
+                if (exitsDict[direction].roomName == "Fridge")
+                {
+                    Invoke("ImageChange", 0.2f);
+                }
+                currentRoomImage.texture = exitsDict[direction].image;
+            }
             gameController.LogStringWithReturn("You go to the " + direction);
             gameController.DisplayRoomText();
         }
@@ -33,6 +44,11 @@ public class RoomNavigation : MonoBehaviour
         {
             gameController.LogStringWithReturn("There is no path in the " + direction);
         }
+    }
+
+    public void ImageChange()
+    {
+        currentRoomImage.texture = normalFridge;
     }
 
     public void ClearExits()

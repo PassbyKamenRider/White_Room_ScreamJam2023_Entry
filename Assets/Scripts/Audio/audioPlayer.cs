@@ -99,10 +99,18 @@ public class audioPlayer : MonoBehaviour
     }
 
 
-    public void play_audio_dream()
-    {
+    private void play_audio_dream_helper()
+    {   
         audio_dream.Play();
     }
+
+    public void play_audio_dream()
+    {   
+        Invoke("play_audio_dream_helper", 4f);
+    }
+
+
+
 
 
     

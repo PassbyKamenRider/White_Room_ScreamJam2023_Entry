@@ -55,6 +55,8 @@ public class SurveyController : MonoBehaviour
                     Destroy(plate);
                     gameObject.SetActive(false);
                     puzzle.SetActive(true);
+                    audioPlayer.instance.play_audio_bed();
+                    audioPlayer.instance.play_audio_dream();
                     //progress += 1;
                 }
             }

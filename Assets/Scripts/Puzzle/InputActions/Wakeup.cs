@@ -12,6 +12,7 @@ public class Wakeup : InputAction
             // Good ending music here
             gameController.puzzleScreen.SetActive(false);
             gameController.endBScreen.SetActive(true);
+            audioPlayer.instance.play_audio_music_good();
         }
     }
 }

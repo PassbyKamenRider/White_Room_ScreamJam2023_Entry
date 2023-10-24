@@ -13,6 +13,8 @@ public class End : InputAction
             gameController.puzzleScreen.SetActive(false);
             gameController.endScreen.SetActive(true);
             gameController.endAPlate.SetActive(true);
+
+            audioPlayer.instance.play_audio_music_bad();
         }
     }
 }

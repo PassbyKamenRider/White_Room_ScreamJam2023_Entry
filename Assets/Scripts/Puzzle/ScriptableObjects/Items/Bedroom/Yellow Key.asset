@@ -19,3 +19,6 @@ MonoBehaviour:
     textResponse: You picked up the yellow key. When you touch the yellow key, you
       feel warmness from your heart.
     actionResponse: {fileID: 0}
+  - inputAction: {fileID: 11400000, guid: 57172e0009284494f8affd548a30bafe, type: 2}
+    textResponse: You used the yellow key.
+    actionResponse: {fileID: 11400000, guid: 9ec86fe433ddc2c499f2ceea39ef7f98, type: 2}

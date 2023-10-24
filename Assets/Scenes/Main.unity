@@ -10564,7 +10564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1411246732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13649,6 +13649,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 57172e0009284494f8affd548a30bafe, type: 2}
   - {fileID: 11400000, guid: 4f8ac403dadc6a448a4ce0bb09cca3d1, type: 2}
   - {fileID: 11400000, guid: b8fd790ee214e1548bf12d70fa329964, type: 2}
+  - {fileID: 11400000, guid: b73e5de9a943beb4ebd21553aab52d7e, type: 2}
   endScreen: {fileID: 1406167003}
   puzzleScreen: {fileID: 16591444}
   endAPlate: {fileID: 1153841583}

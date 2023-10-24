@@ -9,6 +9,7 @@ public class End : InputAction
     {
         if (gameController.roomNavigation.currentRoom.roomName == "EndA" && inputWords[1] == "game")
         {
+            // Bad end music here
             gameController.puzzleScreen.SetActive(false);
             gameController.endScreen.SetActive(true);
             gameController.endAPlate.SetActive(true);

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c370bcc4ca85564e81821fc9e0a91ac, type: 3}
   m_Name: White Door
   m_EditorClassIdentifier: 
-  description: The door is locked, you may want to go back to the <b>living room</b>
+  description: The door is locked, you may want to go back to the <b>LIVING ROOM</b>
     before you find the key.
   roomName: White Door
   exits:

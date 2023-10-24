@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Living Room_0
   m_EditorClassIdentifier: 
   description: You wake up in a strange room that appears to be a living room. You're
-    lying on the couch. Did you sleep here last night? Where is this?
+    lying on the couch. Did you sleep here last night? Where is this place? <br>Enter
+    <b>help <number></b> for game commands.
   roomName: Living Room_0
   exits:
   - keyString: white door

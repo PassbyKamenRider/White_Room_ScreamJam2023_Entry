@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 public class audioPlayer : MonoBehaviour
-{
+{   
     public static audioPlayer instance;
 
     private void Awake()
@@ -19,7 +19,9 @@ public class audioPlayer : MonoBehaviour
     }
 
     public AudioSource audio_keyboard, audio_white_noise, audio_mouse, audio_walk, audio_sit, audio_eat, audio_flush, audio_place,
-    audio_light, audio_bed, audio_dream;
+    audio_light, audio_bed, audio_dream, audio_music;
+
+    public AudioClip audioclip_intense_1, audioclip_intense_2, audioclip_theme;
 
     public void play_audio_keyboard()
     {
@@ -107,6 +109,23 @@ public class audioPlayer : MonoBehaviour
     public void play_audio_dream()
     {   
         Invoke("play_audio_dream_helper", 4f);
+    }
+
+    public void play_audio_music()
+    {
+        StartCoroutine(PlayAndLoopMusic());
+    }
+
+    private IEnumerator PlayAndLoopMusic()
+    {
+        audio_music.clip = audioclip_intense_1;
+        audio_music.Play();
+
+        yield return new WaitForSeconds(64f); 
+
+        audio_music.clip = audioclip_intense_2;
+        audio_music.loop = true;
+        audio_music.Play();
     }
 
 

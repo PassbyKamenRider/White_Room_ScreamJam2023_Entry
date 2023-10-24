@@ -59,6 +59,7 @@ public class SurveyController : MonoBehaviour
                     sleepAnimator.Play("Sleep");
                     audioPlayer.instance.play_audio_bed();
                     audioPlayer.instance.play_audio_dream();
+                     audioPlayer.instance.play_audio_music();
                     progress += 1;
                 }
             }

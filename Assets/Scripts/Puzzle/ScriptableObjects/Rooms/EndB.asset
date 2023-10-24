@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c370bcc4ca85564e81821fc9e0a91ac, type: 3}
   m_Name: EndB
   m_EditorClassIdentifier: 
-  description: 
-  roomName: 
+  description: Hey, we finally recovers connection to your mind, you're in a coma
+    after you're caught by those insect bastards. Listen, you're now in a simulated
+    white room, look behind, this place is collapsing. Type in <b>WAKE UP</b> in
+    the command line, we should be able to get you out of your nightmare.
+  roomName: EndB
   exits: []
   interactableObjects: []
   image: {fileID: 0}

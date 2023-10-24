@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c370bcc4ca85564e81821fc9e0a91ac, type: 3}
-  m_Name: Yellow Door
+  m_Name: Window
   m_EditorClassIdentifier: 
-  description: The door is locked, you may want to go back to the <b>LIVING ROOM</b>
-    before you find the key.
-  roomName: Yellow Door
+  description: It's a food delivery window.
+  roomName: Window
   exits:
-  - keyString: living room
+  - keyString: bedroom
     exitDescription: 
-    valueRoom: {fileID: 11400000, guid: f1c9de88cda20b54e97cb840bf09d1ec, type: 2}
+    valueRoom: {fileID: 11400000, guid: e205e7162a060c84c9b353b2667a4a19, type: 2}
   interactableObjects:
-  - {fileID: 11400000, guid: dcc548a2d5501cb4985520b5e0d10930, type: 2}
-  image: {fileID: 2800000, guid: a47cfafba251dd74c97c78231eb2058a, type: 3}
+  - {fileID: 11400000, guid: 78090f7355c57414ca3f6879054307ad, type: 2}
+  - {fileID: 11400000, guid: 78886e59c465e69478554e54436f48e6, type: 2}
+  image: {fileID: 2800000, guid: a68939f72337e004ab801a1927718f2a, type: 3}

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c370bcc4ca85564e81821fc9e0a91ac, type: 3}
   m_Name: Black Door
   m_EditorClassIdentifier: 
-  description: Total darkness inside. I should probably go back to the <b>living
-    room</b> to find a flashlight.
+  description: Total darkness inside. I should probably go back to the <b>LIVING
+    ROOM</b> to find a <b>FLASHLIGHT</b>.
   roomName: Black Door
   exits:
   - keyString: living room

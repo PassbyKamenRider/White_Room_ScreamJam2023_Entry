@@ -16,8 +16,8 @@ MonoBehaviour:
     came back too late last night, worked too hard, and accidentally put the key
     in the fridge. Now that I've found it, everything is over. Everything will return
     to the routine. I'll face my job, my life, and the new day ahead. I feel the
-    sunlight on me, feeling incredibly free ... or, is it? Type <b>END</b> to complete
-    your test today.
+    sunlight on me, feeling incredibly free ... or, is it? Type <b>END GAME</b> to
+    complete your test today.
   roomName: EndA
   exits: []
   interactableObjects: []

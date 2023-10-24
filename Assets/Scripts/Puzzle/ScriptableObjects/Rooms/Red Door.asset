@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c370bcc4ca85564e81821fc9e0a91ac, type: 3}
   m_Name: Red Door
   m_EditorClassIdentifier: 
-  description: The door is ajar, you can <b>go ahead</b>.
+  description: The door is ajar, you can <b>GO AHEAD</b>.
   roomName: Red Door
   exits:
   - keyString: living room

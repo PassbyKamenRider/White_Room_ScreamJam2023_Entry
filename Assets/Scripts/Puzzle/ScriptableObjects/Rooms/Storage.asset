@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Storage
   m_EditorClassIdentifier: 
   description: The flashlight illuminates the area, revealing it to be a storage
-    room. But it's empty, with only a <b>bedroom key</b> and a <b>note</b> hanging.
+    room. But it's empty, with only a <b>BEDROOM KEY</b> and a <b>NOTE</b> hanging.
   roomName: Storage
   exits:
   - keyString: living room

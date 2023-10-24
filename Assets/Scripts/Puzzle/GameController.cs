@@ -16,6 +16,8 @@ public class GameController : MonoBehaviour
     public GameObject endScreen;
     public GameObject puzzleScreen;
     public GameObject endAPlate;
+    public GameObject banana;
+    public GameObject endBScreen;
 
     private void Awake() {
         roomNavigation = GetComponent<RoomNavigation>();

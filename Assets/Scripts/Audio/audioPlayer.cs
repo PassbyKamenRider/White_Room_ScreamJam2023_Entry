@@ -111,14 +111,23 @@ public class audioPlayer : MonoBehaviour
         Invoke("play_audio_dream_helper", 4f);
     }
 
-    public void play_audio_music()
+    public void play_audio_music_bad()
     {
         StartCoroutine(PlayAndLoopMusic());
+    }
+
+
+    public void play_audio_music_good()
+    {
+        audio_music.clip = audioclip_theme;
+        audio_music.loop = true;
+        audio_music.Play();
     }
 
     private IEnumerator PlayAndLoopMusic()
     {
         audio_music.clip = audioclip_intense_1;
+        audio_music.loop = false;
         audio_music.Play();
 
         yield return new WaitForSeconds(64f); 

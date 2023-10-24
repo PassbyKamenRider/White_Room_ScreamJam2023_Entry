@@ -10,9 +10,10 @@ public class Wakeup : InputAction
         if (gameController.roomNavigation.currentRoom.roomName == "EndB" && inputWords[1] == "up")
         {
             // Good ending music here
+            gameController.player.SetActive(false);
             gameController.puzzleScreen.SetActive(false);
             gameController.endBScreen.SetActive(true);
-            audioPlayer.instance.play_audio_music_good();
+            gameController.StartEndB();
         }
     }
 }

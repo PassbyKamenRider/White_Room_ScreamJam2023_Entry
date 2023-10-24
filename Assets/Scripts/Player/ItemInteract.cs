@@ -51,7 +51,8 @@ public class ItemInteract : MonoBehaviour
                     {
                         HUD.SetActive(false);
                         endAScreen.SetActive(true);
-                        Invoke("Restart", 5.0f);
+                        gameObject.SetActive(false);
+                        Invoke("Restart", 10.0f);
                     }
                 }
                 if (hitinfo.collider.gameObject.name == "banana")
@@ -104,6 +105,7 @@ public class ItemInteract : MonoBehaviour
 
     public void Restart()
     {
+        audioPlayer.instance.stop_audio_music_bad();
         SceneManager.LoadScene("Main");
     }
 }

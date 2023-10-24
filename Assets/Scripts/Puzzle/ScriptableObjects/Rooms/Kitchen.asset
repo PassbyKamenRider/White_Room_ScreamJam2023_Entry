@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c370bcc4ca85564e81821fc9e0a91ac, type: 3}
   m_Name: Kitchen
   m_EditorClassIdentifier: 
-  description: A seemingly ordinary kitchen, with a <b>FRIDGE</b>, a <b>CABINET</b>,
+  description: A seemingly ordinary <b>KITCHEN</b>, with a <b>FRIDGE</b>, a <b>CABINET</b>,
     and a stove. Stove looks very clean. Does no one live here? You notice the source
     of light is from above, from an oddly shaped <b>CHANDELIER</b>.
   roomName: Kitchen

@@ -18,6 +18,7 @@ public class SurveyController : MonoBehaviour
     public GameObject sleepPanel;
     public GameObject plate;
     private int progress;
+    public GameObject player;
 
     private void Start() {
         questionText.text = questions[progress];
@@ -53,10 +54,11 @@ public class SurveyController : MonoBehaviour
             {
                 if (hitinfo.collider.name == "bed")
                 {
+                    player.SetActive(false);
                     Destroy(plate);
                     puzzle.SetActive(true);
-                    objective.text = "Objective:\nComplete the Game";
                     sleepAnimator.Play("Sleep");
+                    audioPlayer.instance.stop_audio_walk();
                     audioPlayer.instance.play_audio_bed();
                     audioPlayer.instance.play_audio_dream();
                     progress += 1;
@@ -66,6 +68,8 @@ public class SurveyController : MonoBehaviour
 
         else if (progress == 14 && sleepAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
         {
+            player.SetActive(true);
+            objective.text = "Objective:\nComplete the Game";
             sleepPanel.SetActive(false);
             progress += 1;
             gameObject.SetActive(false);

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c370bcc4ca85564e81821fc9e0a91ac, type: 3}
   m_Name: Storage
   m_EditorClassIdentifier: 
-  description: The flashlight illuminates the area, revealing it to be a storage
+  description: The flashlight illuminates the area, revealing it to be a <b>STORAGE</b>
     room. But it's empty, with only a <b>BEDROOM KEY</b> and a <b>NOTE</b> hanging.
   roomName: Storage
   exits:

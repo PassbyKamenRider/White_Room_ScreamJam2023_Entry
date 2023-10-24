@@ -23,6 +23,20 @@ public class audioPlayer : MonoBehaviour
 
     public AudioClip audioclip_intense_1, audioclip_intense_2, audioclip_theme;
 
+    private float timer;
+    private bool changeClip;
+
+    private void Update() {
+        timer += Time.deltaTime;
+        if (changeClip && timer >= 64.0f)
+        {
+            changeClip = false;
+            audio_music.clip = audioclip_intense_2;
+            audio_music.loop = true;
+            audio_music.Play();
+        }
+    }
+
     public void play_audio_keyboard()
     {
         audio_keyboard.Play();
@@ -113,7 +127,13 @@ public class audioPlayer : MonoBehaviour
 
     public void play_audio_music_bad()
     {
-        StartCoroutine(PlayAndLoopMusic());
+        PlayAndLoopMusic();
+    }
+
+    public void stop_audio_music_bad()
+    {
+        audio_music.loop = false;
+        audio_music.Stop();
     }
 
 
@@ -124,17 +144,13 @@ public class audioPlayer : MonoBehaviour
         audio_music.Play();
     }
 
-    private IEnumerator PlayAndLoopMusic()
+    private void PlayAndLoopMusic()
     {
         audio_music.clip = audioclip_intense_1;
         audio_music.loop = false;
         audio_music.Play();
-
-        yield return new WaitForSeconds(64f); 
-
-        audio_music.clip = audioclip_intense_2;
-        audio_music.loop = true;
-        audio_music.Play();
+        changeClip = true;
+        timer = 0f;
     }
 
 

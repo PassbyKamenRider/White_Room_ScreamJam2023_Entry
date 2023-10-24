@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     public GameObject endAPlate;
     public GameObject banana;
     public GameObject endBScreen;
+    public GameObject player;
 
     private void Awake() {
         roomNavigation = GetComponent<RoomNavigation>();
@@ -98,5 +99,15 @@ public class GameController : MonoBehaviour
     {
         roomNavigation.UnpackExitRoom();
         InteractableObjectsInRoom(roomNavigation.currentRoom);
+    }
+
+    public void StartEndB()
+    {
+        Invoke("PlayEndMusic", 4.0f);
+    }
+
+    public void PlayEndMusic()
+    {
+        audioPlayer.instance.play_audio_music_good();
     }
 }

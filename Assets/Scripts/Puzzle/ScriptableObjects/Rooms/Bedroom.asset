@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c370bcc4ca85564e81821fc9e0a91ac, type: 3}
   m_Name: Bedroom
   m_EditorClassIdentifier: 
-  description: A room that seems familiar. A computer, a regular bed, a toilet, and...
-    a food delivery <b>WINDOW</b>? There's also an ordinary chandelier. But why wasn't
-    any light coming out earlier?
+  description: A <b>BEDROOM</b> that seems familiar. A computer, a regular bed, a
+    toilet, and... a food delivery <b>WINDOW</b>? There's also an ordinary chandelier.
+    But why wasn't any light coming out earlier?
   roomName: Bedroom
   exits:
   - keyString: living room

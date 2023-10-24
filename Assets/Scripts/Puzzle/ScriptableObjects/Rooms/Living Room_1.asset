@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c370bcc4ca85564e81821fc9e0a91ac, type: 3}
   m_Name: Living Room_1
   m_EditorClassIdentifier: 
-  description: The room is dimly lit, with only a faint light coming from the door
-    behind you, but it's enough for you to see the entire surroundings. Directly
-    in front of you is a <b>WHITE DOOR</b>, which seems to be the way out. There
-    are also a <b>BLACK DOOR</b> on the left, a <b>YELLOW DOOR</b> on the right,
+  description: The <b>LIVING ROOM</b> is dimly lit, with only a faint light coming
+    from the door behind you, but it's enough for you to see the entire surroundings.
+    Directly in front of you is a <b>WHITE DOOR</b>, which seems to be the way out.
+    There are also a <b>BLACK DOOR</b> on the left, a <b>YELLOW DOOR</b> on the right,
     and a <b>RED DOOR</b> behind you. This room appears to only have a <b>COUCH</b>.
   roomName: Living Room_1
   exits:
@@ -28,6 +28,9 @@ MonoBehaviour:
   - keyString: yellow door
     exitDescription: 
     valueRoom: {fileID: 11400000, guid: d78e45d6dbaff6141ad15b155215ec25, type: 2}
+  - keyString: red door
+    exitDescription: 
+    valueRoom: {fileID: 11400000, guid: ecb7ad9af1d63b5408f7ecca909d0c77, type: 2}
   interactableObjects:
   - {fileID: 11400000, guid: 3c4fce6a76559b94fa456de4da680d9c, type: 2}
   - {fileID: 11400000, guid: 6ac9f710339c7fc48a96f7f4b7cb6700, type: 2}
